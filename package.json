@@ -10,8 +10,14 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@pinia/nuxt": "^1.0.3",
     "nuxt": "^4.6.1",
+    "pinia": "^4.1.0",
     "vue": "^3.5.43",
     "vue-router": "^5.4.0"
+  },
+  "devDependencies": {
+    "less": "^4.9.1",
+    "vite-svg-loader": "^5.1.3"
   }
 }
