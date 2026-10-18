@@ -1,7 +1,11 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+
+import svgLoader from "vite-svg-loader";
+
 export default defineNuxtConfig({
   modules: ['@pinia/nuxt'],
   compatibilityDate: '2025-07-15',
+  
   css: ["@/styles/styles.less"],
   devtools: { enabled: true },
 
@@ -16,6 +20,7 @@ export default defineNuxtConfig({
         },
       },
     },
+    plugins: [svgLoader()],
   },
 
 });

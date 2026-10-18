@@ -7,12 +7,20 @@
 </template>
 
 <script setup>
-import PageFooter from './components/page/PageFooter.vue';
-import PageHeader from './components/page/PageHeader.vue';
+import { useStore } from "@/stores/index.js";
+import PageFooter from "./components/page/PageFooter.vue";
+import PageHeader from "./components/page/PageHeader.vue";
+
+const store = useStore();
 
 useHead({
   htmlAttrs: {
     lang: () => "ru",
+  },
+  bodyAttrs: {
+    class: {
+      "overflow-nav": () => store.navActive,
+    },
   },
   title: "Lenni Art",
   meta: [
@@ -67,3 +75,27 @@ useHead({
   ],
 });
 </script>
+
+<style lang="less">
+.app {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-top: 147px;
+
+  @media @bw1660 {
+    padding-top: 111px;
+  }
+
+  @media @bw768 {
+    padding-top: 70px;
+  }
+  &__main {
+    flex: 1 0 auto;
+  }
+  &__footer {
+    flex: 0 0 auto;
+  }
+}
+</style>
