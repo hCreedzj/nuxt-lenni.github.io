@@ -1,15 +1,17 @@
 <template>
   <div class="app">
     <PageHeader class="app__header" />
-    <main class="app__main"></main>
+    <main class="app__main">
+      <NuxtPage class="app__page" />
+    </main>
     <PageFooter class="app__footer" />
   </div>
 </template>
 
 <script setup>
 import { useStore } from "@/stores/index.js";
-import PageFooter from "./components/page/PageFooter.vue";
-import PageHeader from "./components/page/PageHeader.vue";
+import PageFooter from "./components/pages/PageFooter.vue";
+import PageHeader from "./components/pages/PageHeader.vue";
 
 const store = useStore();
 
@@ -93,6 +95,8 @@ useHead({
   }
   &__main {
     flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
   }
   &__footer {
     flex: 0 0 auto;

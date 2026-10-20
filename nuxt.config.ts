@@ -8,6 +8,9 @@ export default defineNuxtConfig({
   
   css: ["@/styles/styles.less"],
   devtools: { enabled: true },
+  components: [
+    { path: '~/components', pathPrefix: false }
+  ],
 
   vite: {
     css: {

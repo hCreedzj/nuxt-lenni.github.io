@@ -2,20 +2,23 @@
   <!-- /app/components/page/PageHeader.vue -->
   <header class="page-header">
     <div class="page-header__container">
-      <a href="#" class="page-header__logo">
+      <NuxtLink to="/" class="page-header__logo">
         <SvgIcon
           class="page-header__logo-icon"
           name="logo"
           width="202"
           height="147"
         />
-      </a>
+      </NuxtLink>
 
       <nav
         class="page-header__nav"
         :class="{ 'page-header__nav--active': navActive }"
       >
-        <a href="#" class="page-header__nav-link">Мероприятия</a>
+        <NuxtLink to="/events" class="page-header__nav-link"
+          >Мероприятия</NuxtLink
+        >
+
         <a href="#" class="page-header__nav-link">Блог</a>
         <a href="#" class="page-header__nav-link">О нас</a>
         <a href="#" class="page-header__nav-link">Контакты</a>
@@ -168,6 +171,9 @@ const toggleNav = () => {
     line-height: 25px;
     text-decoration: none;
     transition: color 0.2s;
+    &.router-link-active {
+      color: @red_dark;
+    }
     @media @bw1020 {
       margin: 0 0 40px;
       font-size: 16px;
