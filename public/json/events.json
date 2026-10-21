@@ -9,7 +9,7 @@
     "date": "2026-12-07T18:00:00.000+07:00"
   },
   {
-    "slug": "stuff",
+    "slug": "howtostuffworks",
     "img": "/images/events/howstuffworks.png",
     "img_webp": "/images/events/howstuffworks.webp",
     "alt": "HowStuffWorks",
@@ -45,7 +45,7 @@
     "date": "2026-12-25T13:00:00.000+07:00"
   },
   {
-    "slug": "hatters",
+    "slug": "thehatters",
     "img": "/images/events/Thehatters.png",
     "img_webp": "/images/events/Thehatters.webp",
     "alt": "The Hatters",
